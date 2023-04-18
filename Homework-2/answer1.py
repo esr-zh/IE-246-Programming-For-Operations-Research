@@ -13,10 +13,10 @@ def summary(lst):
     sorted_lst = sorted(lst)
     median = (sorted_lst[(n-1)//2] + sorted_lst[n//2]) / 2
     maximum = max(lst)
-    statistics = {'min': minimum, 'mean': mean, 'median': median, 'var': variance, 'stddev': stddev, 'max': maximum}
-    return statistics
+    stats = {'min': minimum, 'mean': mean, 'median': median, 'var': variance, 'stddev': round(stddev, 6), 'max': maximum}
+    return stats
 
-lst1 = [1,4,3,2,5]
-lst2 = [1,4,3,2,5,6]
-print(summary(lst1))
-print(summary(lst2))
+list1 = [1,4,3,2,5]
+list2 = [1,4,3,2,5,6]
+print(summary(list1))
+print(summary(list2))
